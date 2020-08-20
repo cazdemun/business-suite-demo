@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- A feature where the complete scheme is shown as a JSON is at the end of the page but it is not functional.
+
+- Basic authentication logic (w/o backend) is functional but not yet visible.
+
+## [0.0.2] - 2020-08-20
+
+### Added
+
+- Added a schema generator. This version lets you play with the properties of a table and its data according to antd documentation (https://ant.design/components/table/). You can also change the name of the entity. Saving is not yet supported. If the JSON is not valid then no changes are applied.
+
+- Added a Header and a Layout based on a 'Holy Grail' design, minus the Footer.
+
+### Changed
+
+- Changed app title to "BUS Demo"
+
 ## [0.0.1] - 2020-08-17
 
 ### Security
