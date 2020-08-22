@@ -11,6 +11,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Basic authentication logic (w/o backend) is functional but not yet visible.
 
+- A credit page for some free icons used is yet to be shown (https://www.flaticon.com/free-icon/dollar_550638).
+
+- A delete button appears on the side of each file saved, this button is still not implemented.
+
+## [0.0.3] - 2020-08-22
+
+### Added
+
+- Added a sider with all the configuration saved. For now it just defaults to local storage with some dummy titles.
+
+- Added save button for configurations. You can save the title of your configuration for now, title is required.
+
+### Changed
+
+- Changed favicon for a more 'financial' look.
+
+- Changed input placeholder from "Entity Name" to "Configuration Name".
+
 ## [0.0.2] - 2020-08-20
 
 ### Added

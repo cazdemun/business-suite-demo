@@ -21,3 +21,15 @@ w-full {
 h-full {
   height: 100%;
 }
+
+.anticon-right {
+  color: gray;
+}
+
+.anticon-left {
+  color: gray;
+}
+
+.ant-layout-sider-trigger {
+  background: white;
+}

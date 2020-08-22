@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Card, Table, Col, Row, Input, Divider } from "antd";
+import { Card, Table, Col, Row, Input, Divider, Button, Form } from "antd";
+import { SaveOutlined } from '@ant-design/icons';
 
 const { TextArea } = Input;
 
@@ -36,7 +37,7 @@ const dataSource = [
   },
 ];
 
-const DynamicTable = () => {
+const DynamicTable = ({ saveConfiguration = (configuration) => console.log('Not implemented!', `Not saving ${configuration}`) }) => {
   const [localColumns, setLocalColumns] = useState(columns)
   const [localDataSource, setLocalDataSource] = useState(dataSource)
 
@@ -59,10 +60,26 @@ const DynamicTable = () => {
   }
 
   return <>
+    <h1>Configuration Generator</h1>
     <Col className="h-full">
       <Col span={24} >
-        <Card title={<Input placeholder="Entity Name" />} className="h-full">
-          <Table columns={localColumns} dataSource={localDataSource} />
+        <Card title={
+          <Form style={{ display: "flex" }}
+            onFinish={(values) => saveConfiguration(values.configuration)}>
+            <Form.Item
+              style={{ flex: "1" }}
+              name="configuration"
+              rules={[{ required: true, message: 'Please input the configuration name!' }]}>
+              <Input placeholder="Configuration Name" />
+            </Form.Item>
+            <Form.Item>
+              <Button
+                icon={<SaveOutlined />}
+                htmlType="submit">Save</Button>
+            </Form.Item>
+          </Form>}
+          className="h-full">
+          <Table tableLayout="fixed" columns={localColumns} dataSource={localDataSource} />
         </Card>
       </Col>
       <Divider />
